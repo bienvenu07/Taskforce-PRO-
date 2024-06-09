@@ -1,16 +1,12 @@
 /* Style général de la galerie */
 .galerie-container {
-    width: 100%;
-    height: 300%;
-    /* margin: 0 auto; */
-    text-align: center;
-    font-family: sans-serif;
-    background-color:#1a1818;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
-.boddy{
-    width: 100vw;
-    height: 100vh;
-}
+ body {
+    margin: 0;
+    font-family: Arial,sans-serif;
+ }
 
 .galerie-container h5 {
     margin-top: 20px;
@@ -21,24 +17,28 @@
 
 /* Style des conteneurs d'images */
 .galerie {
+
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0px;
-    margin-top: 5px;
+    height: 100vh;
+    overflow: hidden;
+   
 }
 
 .image-container {
-    width: 150px;
-    height: 300px;
+    
+    flex: 1;
+    background-size: cover;
+    background-position: center;
     position: relative;
-    overflow: hidden;
-    border: 1px solid #ddd;
-    cursor: pointer;
-    filter: brightness(65%)
-    contrast(110%);
+    transition: all 0.3s ease;
 }
+/* .image-container:hover{
+    backdrop-filter: blur(5px); 
+} */
 
+.details:hover{
+    backdrop-filter: blur(5px);
+}
 .image-container img {
     width: 100%;
     height: 100%;
@@ -48,39 +48,49 @@
 
 .image-container:hover img {
     transform: scale(1.1);
+} 
+
+.image-container .more-info{
+    display: block;
+    opacity: 1;
+    transition: all 0.3s ease;
 }
 
 /* Style des détails des images */
 .details {
     position: absolute;
-    bottom: 0;
-    width: 30%;
+    bottom: 20px;
+    left: 20px;
     color: white;
-    padding: 15px;
-    padding-left:65;
-    text-align: justify;
+    transition: all 0.3s ease;
    
 }
+ 
 
-.location {
-    font-size: 0.8em; /* Use em units for relative font size */
-    margin-bottom: 5px;
+.details .more-info{
+    display: none;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.details:hover.more-info{
+    display: block;
+    opacity: 1;
+    transition: all 0.3s ease;
 }
 
 .details h2 {
     margin: 0;
-    padding: 0;
-    font-size: 0.9em;
-    height: 10%;
-    padding-left:80;
-    font-family: Arial;
-    font-stretch: extra-expanded;
+    font-size: 24px;
 }
 
 .details p {
-    margin: 0;
-    padding: 0;
-    font-size: 0.4em;
-    line-height: 3;
-    padding-left:150;
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.more-info{
+    color:#ffc75f;
+    text-decoration: none;
+    font-size: 16px;
 }
