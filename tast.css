@@ -1,0 +1,70 @@
+/* Style général de la galerie */
+.galerie-container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.galerie-container h1 {
+    margin-top: 20px;
+    font-size: 2.5em;
+}
+
+/* Style des conteneurs d'images */
+.galerie {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0px;
+    margin-top: 5px;
+}
+
+.image-container {
+    width: 150px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.image-container:hover img {
+    transform: scale(1.1);
+}
+
+/* Style des détails des images */
+.details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30%;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    color: white;
+    padding: 10px;
+}
+
+.location {
+    font-size: 0.8em; /* Use em units for relative font size */
+    margin-bottom: 5px;
+}
+
+.details h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    height: 10%;
+}
+
+.details p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.6em;
+}
