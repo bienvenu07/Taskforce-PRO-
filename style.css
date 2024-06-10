@@ -1,96 +1,60 @@
-/* Style général de la galerie */
-.galerie-container {
+body {
     margin: 0;
     font-family: Arial, sans-serif;
-}
- body {
-    margin: 0;
-    font-family: Arial,sans-serif;
- }
-
-.galerie-container h5 {
-    margin-top: 20px;
-    font-size: 0.5em;
-    text-align:calc(10);
-    color:#d5cabd;
-}
-
-/* Style des conteneurs d'images */
-.galerie {
-
+  }
+  
+  .container {
     display: flex;
     height: 100vh;
     overflow: hidden;
-   
-}
-
-.image-container {
-    
+  }
+  
+  .card {
     flex: 1;
     background-size: cover;
     background-position: center;
     position: relative;
     transition: all 0.3s ease;
-}
-/* .image-container:hover{
-    backdrop-filter: blur(5px); 
-} */
-
-.details:hover{
+  }
+  
+  .card:hover {
+    /* filter: grayscale(100%); */
     backdrop-filter: blur(5px);
-}
-.image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.image-container:hover img {
-    transform: scale(1.1);
-} 
-
-.image-container .more-info{
-    display: block;
-    opacity: 1;
-    transition: all 0.3s ease;
-}
-
-/* Style des détails des images */
-.details {
+  }
+  
+  .info {
     position: absolute;
     bottom: 20px;
     left: 20px;
     color: white;
     transition: all 0.3s ease;
-   
-}
- 
-
-.details .more-info{
+  }
+  
+  .info .more-info {
     display: none;
     opacity: 0;
     transition: all 0.3s ease;
-}
-
-.details:hover.more-info{
+  }
+  
+  .card:hover .more-info {
     display: block;
     opacity: 1;
     transition: all 0.3s ease;
-}
-
-.details h2 {
+  }
+  
+  .info h2 {
     margin: 0;
     font-size: 24px;
-}
-
-.details p {
+  }
+  
+  .info p {
     margin: 5px 0;
     font-size: 18px;
-}
-
-.more-info{
-    color:#ffc75f;
+  }
+  
+  .more-info {
+    color: cyan;
     text-decoration: none;
     font-size: 16px;
-}
+  }
+  
